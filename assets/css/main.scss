@@ -1,0 +1,1014 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap');
+
+
+*, *:before, *:after {
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  -moz-box-sizing:border-box;
+  -webkit-box-sizing:border-box;
+  -o-box-sizing:border-box;
+  -ms-box-sizing:border-box;
+}
+
+$primary-color: #00cf4d;
+$pr-color: #100f41;
+$primary-color-light: #7fe7a6;
+$primary-color-text: #ffffff;
+$accent-color: #253556; 
+$accent-color-light: #12114a;
+$divider-color-light:  #f8f8fa;
+$divider-color: #efefef;
+$divider-color-text: #c1c4ca;
+
+/* Изменение цвета выделения на старнице */
+::selection {background: #00CF4D; color:#fff;}
+::-moz-selection {background: #00CF4D; color:#fff;}
+::-webkit-selection {background: #00CF4D; color:#fff;}
+
+@mixin background-img($src) {
+  background-image: url($src);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+
+@mixin d-lex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+button {
+  border: none;
+  background-color: $primary-color;
+}
+button:hover,
+.start_new:hover {
+  -webkit-box-shadow: 0px 0px 13px 2px $primary-color;
+  -moz-box-shadow: 0px 0px 13px 2px $primary-color;
+  box-shadow: 0px 0px 13px 2px $primary-color;
+  color: $primary-color-text !important;
+}
+button:focus {
+  outline: none;
+}
+
+.title_text {
+  font-size: 25px;
+  font-weight: 700;
+  color: $accent-color;
+  padding-bottom: 10px;
+}
+
+::selection {background: #00CF4D; color:#fff;}
+::-moz-selection {background: #00CF4D; color:#fff;}
+::-webkit-selection {background: #00CF4D; color:#fff;}
+
+  .myWorkshopPage {
+    background-color: $divider-color-light;
+  }
+ body {
+  font-family: 'Montserrat', sans-serif;
+  .header_workshop {
+    background-image: url('../images/header.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: $primary-color-text;
+    padding: 20px 0 45px;
+    .head__logine i {
+      margin-top: -15px;
+    }
+    .close,
+    .fa-times-circle,
+    .mobile__bell_modal {
+      z-index: 9 !important;
+    }
+    .header_workshop_sub {
+      @include d-lex();
+      p{
+        font-family: 'Montserrat', sans-serif !important;
+        display: block;
+        font-size: 38px;
+        font-weight: 600;
+        color: $primary-color-text;
+        margin-top: -10px;
+      }
+
+      .header_buttons {
+        .btn_left {
+          background-color: transparent;
+          width: 160px;
+          height: 25px;
+          border-radius: 30px;
+          border: 1px solid $primary-color;
+          color: $primary-color;
+          font-size: 12px;
+          font-weight: 500;
+          text-transform: uppercase;
+          margin-right: 20px;
+        }
+        .btn_left:hover {
+          background-color: $primary-color;
+          color: $primary-color-text;
+        }
+        .btn_right {
+          width: 190px;
+          height: 25px;
+          border-radius: 30px;
+          color: $accent-color;
+          font-size: 12px;
+          font-weight: 500;
+          text-transform: uppercase;
+        }
+      }
+    }
+   
+    .head__main_block {
+      margin-left: 50px;
+      height: 100px !important;
+      padding-bottom: 40px;
+    }
+    .head__name {
+      margin-top: -15px;
+    }
+    .large_signIn {
+      margin-top: 25px;
+      margin-right: 50px;
+    }
+    .my_info_header_workshop {
+      line-height: 25px;
+      margin-top: 20px;
+      margin-left: 20px;
+       p {
+        padding-top: 0 !important;
+      }
+      a {
+        color: $primary-color;
+        padding-left: 5px;
+      }
+    }
+    
+  }
+  // End header *********************
+  .main_my_workshop {
+    padding: 30px 0;
+    background-color: $divider-color;
+    margin-top: -40px;
+    .main_my_workshop_text {
+      background-color: $primary-color-text;
+      padding: 10px !important;
+      border-radius: 10px;
+      p {
+        text-align: justify !important;
+        margin-bottom: 0 !important;
+      }
+    }
+  }
+  .main_workshop {
+    font-family: 'Montserrat', sans-serif !important;
+    .main_workshop_title_text strong {
+      font-size: 24px;
+      font-weight: 600;
+    }
+    .main_workshop_title_text p {
+      text-align: center;
+      font-weight: 500;
+      color: $accent-color;
+      line-height: 24px; 
+
+    }
+    .main_workshop_title {
+      background-color: $divider-color;
+      padding: 25px 0;
+    }
+    .main_workshop_title_sup {
+      @include d-lex();
+      label {
+        margin-left: auto;
+        margin-top: 10px;
+        margin-right: 20px;
+      }
+      select {
+        width: 230px;
+        height: 30px;
+        font-size: 18px;
+        color: $accent-color;
+        font-weight: 600;
+        font-family: "Montserrat";
+        border-radius: 30px;
+        padding: 0 10px;
+        cursor: pointer;
+      }
+      select:focus {
+        outline: none;
+      }
+    }
+    span {
+      font-size: 28px;
+      color: $accent-color;
+      font-weight: 600;
+    }
+    button {
+      width: 155px;
+      height: 30px;
+      border-radius: 30px;
+      background-color: transparent;
+      border: 1px solid $accent-color;
+      font-size: 12px;
+      color: $accent-color;
+      font-weight: 500;
+      text-transform: uppercase;
+    }
+    button:hover {
+      background-color: $primary-color;
+      color: $primary-color-text;
+      border: 1px solid $primary-color;
+    
+    }
+    .main_workshop_card_list {
+      @include d-lex(); 
+      flex-wrap: wrap;
+    }
+    .my_workshop_card_list {
+      .my_workshop_card{
+        width: 325px;
+        height: 300px;
+        position: relative;
+        border-radius: 10px;
+        margin-left: 40px;
+        margin-top: 30px;
+        .remove_card {
+          width: 30px;
+          height: 30px;
+          display: none;
+          justify-content: center;
+          align-items: center;
+          position: absolute;
+          top: -10px;
+          right: -10px;
+          background-color: $divider-color;
+          opacity: 1;
+          border-radius: 50%;
+          i {
+            color: #ff8fb4;
+            z-index: 5;
+            margin-left: 2px;
+          }
+        }
+      }
+      .card1 {
+        @include background-img('../images/workshop2.jpg');
+      }
+      .card2 {
+        @include background-img('../images/workshop1.jpg');
+      }
+      .card3 {
+        @include background-img('../images/workshop3.jpg');
+      }
+    }
+    .workshop_card {
+      width: 210px;
+      height: 320px;
+      border-radius: 10px;
+      position: relative;
+      margin-top: 25px;
+    }
+      .card_title {
+        padding: 10px;
+        @include d-lex();
+        font-family: "Montserrat", sans-serif !important;
+      background: linear-gradient(0deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 10%, rgb(18, 17, 74) 100%) transparent;
+      border-radius: 10px;
+        .my_avatar_img,
+        .avatar_img {
+          width: 30px;
+          height: 30px;
+          border-radius: 50%;
+          background-color: yellow;
+        }
+        .avatar_img {
+          background-color: #28cee7;
+        }
+        span {
+          text-transform: uppercase;
+          font-size: 14px;
+          font-weight: 600;
+          color: $primary-color-text;
+          margin-right: auto;
+          padding-left: 8px;
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          width: 135px;
+        }
+        i {
+          color: $primary-color-text;
+          cursor: pointer;
+        }
+        
+        .click_animation {
+          transform: scale(1.2);
+        }
+      }
+      .card_list {
+        @include d-lex();
+        flex-direction: column;
+        text-align: center;
+        border-radius: 10px;
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 1;
+        background-color: $primary-color-text;
+        opacity: .9;
+        strong {
+          font-size: 22px;
+          font-weight: 700;
+          color: $accent-color;
+        }
+        span {
+          font-size: 12px;
+          font-weight: 700;
+          color: $primary-color;
+        }
+        p {
+          color: $pr-color;
+          font-size: 12px;
+          font-weight: 400;
+          line-height: 15px;
+        }
+        button {
+          margin-bottom: 30px;
+        }
+      }
+    .my_workshop_card {
+      @include background-img('../images/workshop1.jpg');
+    }
+    .worshop_card1 {
+      @include background-img('../images/workshop2.jpg');
+    }
+    .worshop_card2 {
+      @include background-img('../images/workshop3.jpg');
+    }
+    .worshop_card3 {
+      @include background-img('../images/workshop4.jpg');
+    }
+  }
+  //  End main *********************
+
+.my_workshop_products {
+  padding: 30px 0;
+  .product_photos {
+    @include d-lex();
+    .product_photo_home {
+      width: 400px;
+      height: 390px;
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 10px;
+      }
+    }
+    .my_product_photos {
+      width: 120px;
+      height: 390px;
+      text-align: center;
+      overflow-x: hidden; 
+      overflow-y: auto; 
+      img {
+        width: 80px;
+        height: 80px;
+        object-fit: cover;
+        margin-bottom: 10px;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+    }
+  }
+  .my_product_info {
+    display: flex;
+    align-items: start;
+    justify-content: start;
+    flex-direction: column;
+    h3 {
+      font-size: 28px;
+      font-weight: 600;
+      color: $accent-color;
+      padding-left: 10px;
+    }
+    strong {
+      color: $primary-color;
+      font-weight: 700;
+      padding-left: 10px;
+    }
+    span {
+      font-size: 22px;
+      font-weight: 700;
+      padding: 15px 10px;
+    }
+    .product_info_text {
+      background-color: $primary-color-text;
+      padding: 10px 20px;
+      border-radius: 10px;
+      p {
+        margin-bottom: 0 !important;
+      }
+    }
+  }
+}
+
+.comments_box {
+  background-color: $divider-color-light;
+  padding: 30px 0;
+  margin-top: 45px;
+  .my_comment {
+    @include d-lex();
+    form {
+      @include d-lex();
+      position: relative;
+      #my__comment {
+        border: none;
+        border-radius: 30px;
+        height: 30px;
+        font-size: 13px;
+        font-weight: 500;
+        padding-left: 10px;
+        color: #0f0e41;
+        padding: 5px 160px 5px 15px;
+        overflow: hidden;
+        resize: none;
+      }
+      #my__comment:focus {
+        outline: none;
+      }
+      button {
+        position: absolute;
+        top: 0;
+        right: 0;
+        height: 30px;
+        width: 150px;
+        font-size: 13px;
+        font-weight: 500;
+        border: none;
+        border-radius: 30px;
+        background-color: $primary-color;
+        text-transform: uppercase;
+      }
+    }
+  }
+  .comments_group {
+    min-height: 180px;
+    display: flex;
+    position: relative;
+    margin-top: 30px;
+  }
+  .user_info strong {
+    font-size: 18px;
+    font-weight: 400;
+    color: $accent-color-light;
+  }
+  .user_info span {
+    font-size: 13px;
+    font-weight: 400;
+    color: $accent-color-light;
+  }
+  .user_info i {
+   padding: 0 15px;
+  }
+  .text_comment {
+    width: -100%;
+    height: auto;
+    padding: 12px;
+    background-color: $primary-color-text;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: 500;
+    color: $accent-color-light;
+    margin-top: 10px;
+  }
+  .comment_bgc {
+    background-color: $divider-color-text !important;
+  }
+  .reply {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    display: none !important;
+  }
+  .reply_hide {
+    margin-top: 15px;
+    display: block !important;
+  }
+  .reply a {
+    font-size: 14px;
+    font-weight: 500;
+    color: $accent-color;
+  }
+  .reply i {
+    transform: rotateY(180deg);
+  }
+}
+
+
+
+  .modal {
+    .modal-content {
+      width: 670px;
+      border-radius: 20px;
+      margin-left: -100px;
+    }
+    .modal-head {
+      position: relative;
+      padding-top: 30px;
+    }
+    .modal-head h2{
+      font-size: 28px;
+      font-weight: 600;
+      text-align: center;
+      color: $accent-color;
+    }
+    .close {
+      position: absolute;
+      right: 20px;
+      top: 15px;
+      color: #ff8fb4;
+      opacity: 1;
+    }
+    .close:hover {
+      background: transparent;
+      color: red !important;
+      transform: scale(1.1);
+      box-shadow: none;
+    }
+  }
+  
+  .add_product {
+    
+    .modal-list {
+      form {
+        text-align: center;
+      }
+      padding: 30px 100px;
+      .font-weight-bold,
+      input[type = "text"] {
+        height: 30px;
+        background-color: $divider-color;
+        border-radius: 30px;
+        padding: 0 20px;
+        font-weight: 500 !important;
+        font-size: 12px !important;
+      }
+      input[type = "text"] {
+        text-align: center;
+        border: none;
+      }
+      select:focus,
+      input[type = "text"]:focus {
+        outline: none;
+        border: 1px solid $primary-color;
+      }
+      .avatar_uploades {
+        @include d-lex();
+        display: flex;
+        flex-wrap: wrap;
+      }
+      // .avatar-upload:not(:last-child) {
+      //   margin-right: 1rem;
+      // }
+      .avatar-edit {
+        width: 100px;
+        height: 90px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        i {
+          cursor: pointer;
+          color: $divider-color-text;
+        }
+      }
+      input[type = 'file'] {
+        display: none;
+      }
+      button {
+        width: 155px;
+        height: 30px;
+        background-color: $primary-color;
+        border-radius: 30px;
+        font-size: 12px;
+      }
+    }
+  }
+  // End Modal Добовления товара ***************************
+
+  .edit_store {
+    .editMyStore {
+      display: flex;
+      justify-content: space-between;
+      align-items: start;
+      padding: 30px;
+      .my_store_info {
+        width: 85%;
+        @include d-lex();
+        flex-direction: column;
+        input,
+        textarea {
+          width: 100%;
+          background-color: $divider-color; 
+          border: none;   
+          margin-bottom: 20px;
+          border-radius: 20px;
+          font-size: 12px;
+          font-weight: 500;
+          color: $accent-color-light;
+          padding: 10px 20px;
+        }
+        textarea {
+          height: 120px;
+        }
+        input {
+          height: 30px;
+        }
+        input:focus,
+        textarea:focus {
+          outline: none;
+          border: 1px solid $primary-color;
+        }
+        button {
+          width: 155px;
+          height: 30px;
+          border-radius: 30px;
+          color: $accent-color;
+          text-transform: uppercase;
+          font-size: 15px;
+          font-weight: 600;
+        }
+      }
+    }
+   
+  }
+
+  .modal_edit_product {
+    .editMyProduct {
+      padding: 30px 120px;
+      form {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        input,
+        textarea {
+          height: 30px;
+          border-radius: 20px;
+          background-color: $divider-color;
+          border: none;
+          margin-bottom: 20px;
+          padding: 10px 15px;
+          font-size: 12px;
+          font-weight: 500;
+          color: $accent-color;
+          text-align: center;
+        }
+        textarea {
+          height: 150px;
+          text-align: start;
+        }
+        input:focus,
+        textarea:focus {
+          outline: none;
+          border: 1px solid $primary-color;
+        }
+        button {
+          width: 40%;
+          height: 30px;
+          font-size: 12px;
+          font-weight: 500;
+          color: $accent-color;
+          text-transform: uppercase;
+          border-radius: 20px;
+        }
+      }
+      select {
+        width: 100%;
+        height: 30px;
+        background-color: $divider-color;
+        border-radius: 30px;
+        color: $accent-color;
+        font-size: 12px;
+        font-weight: 500;
+        padding-left: 10px;
+        cursor: pointer;
+        border: none;
+      }
+      select:focus {
+        outline: none;
+      }
+    }
+    .my_photos {
+      margin-top: 20px;
+      display: flex;
+      flex-wrap: wrap;
+      margin-left: -20px;
+      .my_photo {
+        width: 65px;
+        height: 65px;
+        margin-left: 40px;
+        margin-bottom: 30px;
+        position: relative;
+        img {
+        object-fit: cover;
+        width: 65px;
+        height: 65px;
+        border-radius: 5px;
+        }
+        .remove_my_photo {
+          display: none;
+          position: absolute;
+          top: -5px;
+          right: -5px;
+          z-index: 1;
+          width: 20px;
+          height: 20px;
+          border-radius: 50%;
+          background-color: $primary-color-text;
+          text-align: center;
+          cursor: pointer;
+        
+        i {
+          color: tomato;
+          padding-left: 2px;
+        }
+      }
+      }
+    }
+  }
+  // End Modal
+
+
+
+  .reviews_buttons_desktop {
+    margin: 90px 0;
+    padding: 20px 0;
+    background-color: $primary-color;
+    clip-path: polygon(50% 10%, 51% 0, 100% 0, 100% 100%, 51% 100%, 50% 90%, 49% 100%, 0 100%, 0 0, 49% 0);
+
+    .review_counters_desktop {
+      width: 120px;
+      white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    letter-spacing: 5px;
+    }
+    .review_counters_desktop a {
+      color: $accent-color-light;
+      font-weight: 500;
+    }
+    .review_counters_desktop a:hover {
+      color: $primary-color-text;
+    }
+     button {
+      color: $accent-color-light;
+      font-weight: 600;
+    }
+  }
+
+  .reviews_buttons_mobile {
+    display: none;
+    margin: 90px 0;
+    padding: 20px 0;
+    background-color: $primary-color;
+    clip-path: polygon(50% 10%, 51% 0, 100% 0, 100% 100%, 51% 100%, 50% 90%, 49% 100%, 0 100%, 0 0, 49% 0);
+
+    .review_counter {
+      width: 30px;
+      height: 30px;
+      border-radius: 5px;
+      background-color: #fff;
+      color: $accent-color-light;
+      font-size: 18px;
+      font-weight: 600;
+      margin-right: 8px;
+     text-align: center;
+    }
+  }
+  // End section ******************
+
+  .myWorkshop_back_home {
+    background-color: $primary-color-text;
+    display: flex;
+    align-items: center;
+   height: 70px;
+   .back_home {
+     display: flex;
+     align-items: center;
+     font-size: 13px;
+    color: $accent-color;
+    font-weight: 400;
+    text-decoration: none;
+    i {
+      padding-right: 5px;
+    }
+   }
+   .my_buttons {
+     @include d-lex();
+     .my_logo {
+       width: 35px;
+       height: 35px;
+       border-radius: 50%;
+       background-color: yellow;
+     }
+     .go_store {
+       width: 250px;
+       height: 30px;
+       border-radius: 20px;
+       background-color: transparent;
+       border: 2px solid $accent-color;
+       color: $accent-color;
+       font-size: 18px;
+       font-weight: 600;
+       margin: 0 15px;
+     }
+     .go_store:hover {
+      background-color: $primary-color;
+      color: $primary-color-text;
+      border: none;
+    }
+    .edit_product {
+      width: 210px;
+      height: 30px;
+      border-radius: 20px;
+      font-size: 12px;
+      font-weight: 500;
+      text-transform: uppercase;
+      color: $accent-color;
+    }
+   }
+  }
+
+  
+  footer {
+    @include background-img('../images/footer.jpg');
+    margin-top: 50px;
+    padding: 40px 0 10px;
+    color: $primary-color-text;
+    .footer_logo a,
+    .footer_logo_sub a {
+      display: flex;
+      text-decoration: none;
+    }
+    .footer_logo .letcop_logo{
+      width: 45px;
+      height: 45px;
+    }
+    .investone_logo {
+      width: 70%;
+    }
+    .investone_logo_sub {
+      display: block;
+      width: 60%;
+      margin-left: 30px;
+    }
+    .footer_logo span {
+      color: $primary-color-text;
+      font-size: 22px;
+      font-weight: 700;
+      line-height: 23px;
+    }
+    .footer_logo_sub span {
+      font-size: 18px;
+      line-height: 16px;
+    }
+    .footer_text p {
+      font-size: 18px;
+      font-weight: 500;
+    }
+    .footer_text ul li {
+      list-style: none;
+      font-weight: 300;
+      padding-bottom: 2px;
+    }
+    .footer_text ul li a {
+      text-decoration: none;
+      color: $primary-color-text;
+      font-size: 14px;
+    }
+    .footer_text ul li a:hover {
+      color: $primary-color;
+      border-bottom: 1px solid $primary-color;
+    }
+    i  {
+      font-size: 25px;
+    }
+    a {
+      color: $primary-color-text;
+    }
+    i:hover {
+      color: $primary-color;
+    }
+    .footer_logo_sub {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .letcop_logo_sub {
+      width: 35px;
+      height: 35px;
+    }
+    // mobile footer************
+
+    .dis {
+      display: none;
+  }
+  
+  .container_ded {
+      width: 88.99%;
+      margin: 10px auto;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-start;
+  }
+  
+  /* Footer */
+  
+  .footer {
+      background: url(img/footer.jpg) no-repeat;
+      background-size: cover;
+      color: #fff;
+      background-color: $accent-color-light;
+  }
+  
+  .container_ded:last-child {
+      margin: 0 auto;
+  }
+  .social a i {
+      font-size: 20px;
+  }
+  
+  .footer__item {
+      margin: 20px 0;
+      margin-right: 5%;
+  }
+  .footer__item:last-child{
+      margin-right: 0;
+  }
+  
+  .footer__item:first-child a:hover {
+      text-decoration: none;
+      color: #fff;
+  }
+  
+  .letcop__com {
+      margin-bottom: 10px;
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+      font-size: 165%;
+      font-weight: 700;
+  }
+  .letcop__com div{
+      height: 57px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      line-height: 20px;
+  }
+  .letcop__com div span{
+      font-family: 'Montserrat';
+  }
+  
+  #letcop_com {
+      width: 55px;
+      height: 57px;
+  }
+  
+  #investonse {
+      width: 163px;
+      height: 33px;
+      object-fit: cover;
+  }
+  
+  .olymp p{
+      font-size: 100%;
+      margin-top: 20px;
+  }
+  
+  .footer__item__head {
+      margin: 10px 0 20px;
+      font-weight: 600;
+  }
+  
+  .item__list {
+      line-height: 1.5em;
+      font-size: 14px;
+  }
+  
+  .soc-end a{
+      margin-right: 15px;
+  }
+  }
+ }
+
+ @import 'media';
