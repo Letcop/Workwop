@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Letcop news</title>
+  <title>Творческая мастерская</title>
   <link rel="shortcut icon" href="assets/icons/logo.svg" type="image/x-icon">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
@@ -471,7 +471,9 @@
       <div class="row">
         <div class="col-12 header_workshop_sub">
           <div class="d-flex align-items-center">
-            <img src="assets/images/user4.png" alt="">
+            <div class="my_avatar_title">
+              <img src="assets/images/user4.png" alt="">
+            </div>
             <div class="my_info_header_workshop">
               <p>BOBRO-SHOP</p>
               <span>Создатель: <a href="#">Hamilioner</a></span>
@@ -524,7 +526,7 @@
           <div class="my_workshop_card card1">
             <div class="card_title">
               <a href="#" class="my_avatar_img"></a>
-              <span>borba-shop</span>
+              <span><a href="/#">borba-shop</a></span>
               <div class="remove_card">
                 <i class="fas fa-times-circle fa-2x"></i>
               </div>
@@ -539,7 +541,7 @@
           <div class="my_workshop_card card2">
             <div class="card_title">
               <a href="#" class="my_avatar_img"></a>
-              <span>borba-shop</span>
+              <span><a href="/#">borba-shop</a></span>
               <div class="remove_card">
                 <i class="fas fa-times-circle fa-2x"></i>
               </div>
@@ -554,7 +556,7 @@
           <div class="my_workshop_card card3">
             <div class="card_title">
               <a href="#" class="my_avatar_img"></a>
-              <span>borba-shop</span>
+              <span><a href="/#">borba-shop</a></span>
               <div class="remove_card">
                 <i class="fas fa-times-circle fa-2x"></i>
               </div>
@@ -569,7 +571,7 @@
           <div class="my_workshop_card card1">
             <div class="card_title">
               <a href="#" class="my_avatar_img"></a>
-              <span>borba-shop</span>
+              <span><a href="/#">borba-shop</a></span>
               <div class="remove_card">
                 <i class="fas fa-times-circle fa-2x"></i>
               </div>
@@ -584,7 +586,7 @@
           <div class="my_workshop_card card2">
             <div class="card_title">
               <a href="#" class="my_avatar_img"></a>
-              <span>borba-shop</span>
+              <span><a href="/#">borba-shop</a></span>
               <div class="remove_card">
                 <i class="fas fa-times-circle fa-2x"></i>
               </div>
@@ -599,7 +601,7 @@
           <div class="my_workshop_card card3">
             <div class="card_title">
               <a href="#" class="my_avatar_img"></a>
-              <span>borba-shop</span>
+              <span><a href="/#">borba-shop</a></span>
               <div class="remove_card">
                 <i class="fas fa-times-circle fa-2x"></i>
               </div>
@@ -646,6 +648,7 @@
                     <label for="productImageUpload1" class="d-flex justify-content-center align-items-center">
                       <i class="fas fa-plus-circle fa-2x"></i>
                     </label>
+                    <img src="" alt="">
                   </div>
                 </div>
                 <div class="avatar-upload">
@@ -654,6 +657,7 @@
                     <label for="productImageUpload2" class="d-flex justify-content-center align-items-center">
                       <i class="fas fa-plus-circle fa-2x"></i>
                     </label>
+                    <img src="" alt="">
                   </div>
                 </div>
                 <div class="avatar-upload">
@@ -662,6 +666,7 @@
                     <label for="productImageUpload3" class="d-flex justify-content-center align-items-center">
                       <i class="fas fa-plus-circle fa-2x"></i>
                     </label>
+                    <img src="" alt="">
                   </div>
                 </div>
                 <div class="avatar-upload">
@@ -670,6 +675,7 @@
                     <label for="productImageUpload4" class="d-flex justify-content-center align-items-center">
                       <i class="fas fa-plus-circle fa-2x"></i>
                     </label>
+                    <img src="" alt="">
                   </div>
                 </div>
                 <div class="avatar-upload">
@@ -678,6 +684,7 @@
                     <label for="productImageUpload5" class="d-flex justify-content-center align-items-center">
                       <i class="fas fa-plus-circle fa-2x"></i>
                     </label>
+                    <img src="" alt="">
                   </div>
                 </div>
                 <div class="avatar-upload">
@@ -686,6 +693,7 @@
                     <label for="productImageUpload6" class="d-flex justify-content-center align-items-center">
                       <i class="fas fa-plus-circle fa-2x"></i>
                     </label>
+                    <img src="" alt="">
                   </div>
                 </div>
                 <div class="avatar-upload">
@@ -694,6 +702,7 @@
                     <label for="productImageUpload7" class="d-flex justify-content-center align-items-center">
                       <i class="fas fa-plus-circle fa-2x"></i>
                     </label>
+                    <img src="" alt="">
                   </div>
                 </div>
                 <div class="avatar-upload">
@@ -702,6 +711,7 @@
                     <label for="productImageUpload8" class="d-flex justify-content-center align-items-center">
                       <i class="fas fa-plus-circle fa-2x"></i>
                     </label>
+                    <img src="" alt="">
                   </div>
                 </div>
               </div>
@@ -743,13 +753,17 @@
         <div class="modal-list">
           <form class="" action="#" name="">
             <div class="editMyStore">
-              <div class="my_logo">
-                <img src="assets/images/user4.png" alt="">
+              <div class="edit_store_my_avatar">
+                <input type="file" name="myAvatarInput" id="myAvatarInput" class="add_my_avatar_input"
+                  accept=".png, .jpg, .jpeg">
+                <img src="assets/images/user4.png" alt="" class="myAvatarImg">
+
               </div>
               <div class="my_store_info">
-                <input type="text" placeholder="Назовите Ваш магазин" required>
-                <textarea name="" id="" placeholder="Дайте описание Вашему магазину" required></textarea>
-                <input type="text" placeholder="Ссылка на ваш другой магазин" required>
+                <input type="text" placeholder="Назовите Ваш магазин" class="my_store_name" required>
+                <textarea name="" id="" placeholder="Дайте описание Вашему магазину" class="my_store_text_string"
+                  required></textarea>
+                <!-- <input type="text" placeholder="Ссылка на ваш другой магазин" required> -->
                 <button type="submit">создать</button>
               </div>
             </div>

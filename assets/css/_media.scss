@@ -41,31 +41,35 @@ body {
     align-items: start !important;
   }
   .my_comment form {
-    flex-direction: column !important;
+    // flex-direction: column !important;
   }
   .my_comment form button {
-    position: relative !important;
+    // position: relative !important;
   }
   .my_comment form textarea {
     height: auto !important ;
   }
   .comments_group img,
   .my_comment img {
-    width: 100% !important;
+    width: 70% !important;
+    margin-left: 30px;
   }
   .comments_group .user_info {
     margin-top: -10px !important;
     margin-left: 0 !important;
   }
   .user_info .date_time {
-    flex-direction: column !important;
-    align-items: start !important;
+    // flex-direction: column !important;
+    // align-items: start !important;
   }
   .user_info strong {
     width: 120px;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+  }
+  .workshop_card {
+    width: 210px !important;
   }
 }
 }
@@ -260,10 +264,27 @@ body {
         border-radius: 10px !important;
       }
     }
+    .user_info {
+      flex-direction: column;
+      strong {
+        width: 200px !important;
+      }
+    }
+    .my_product_info  {
+      margin-top: 20px;
+    }
+    .my_photos{
+      .my_photo {
+        margin-left: 10px !important;
+      }
+    }
   }
 }
 @media screen and (max-width: 368px) {
   body {
+    .workshop_card {
+      width: 340px !important;
+    }
   }
 }
 

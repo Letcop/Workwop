@@ -54,6 +54,24 @@ button:focus {
   padding-bottom: 10px;
 }
 
+textarea::-webkit-scrollbar {
+  width: 5px;
+  cursor: pointer;
+}
+
+/* Track */
+textarea::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 5px grey;
+          box-shadow: inset 0 0 5px grey;
+  border-radius: 10px;
+}
+
+/* Handle */
+textarea::-webkit-scrollbar-thumb {
+  background: #00cf4d;
+  border-radius: 10px;
+}
+
 ::-moz-selection {
   background: #00CF4D;
   color: #fff;
@@ -110,6 +128,16 @@ body .header_workshop .header_workshop_sub {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+body .header_workshop .header_workshop_sub .my-avatartitle {
+  display: block;
+}
+
+body .header_workshop .header_workshop_sub .my-avatartitle img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
 }
 
 body .header_workshop .header_workshop_sub p {
@@ -384,13 +412,17 @@ body .main_workshop .card_title span {
   text-transform: uppercase;
   font-size: 14px;
   font-weight: 600;
-  color: #ffffff;
   margin-right: auto;
   padding-left: 8px;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
   width: 135px;
+}
+
+body .main_workshop .card_title span a {
+  text-decoration: none;
+  color: #ffffff;
 }
 
 body .main_workshop .card_title i {
@@ -493,6 +525,8 @@ body .my_workshop_products .product_photos {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  /* Track */
+  /* Handle */
 }
 
 body .my_workshop_products .product_photos .product_photo_home {
@@ -505,6 +539,21 @@ body .my_workshop_products .product_photos .product_photo_home img {
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+  border-radius: 10px;
+}
+
+body .my_workshop_products .product_photos .my_product_photos::-webkit-scrollbar {
+  width: 5px;
+}
+
+body .my_workshop_products .product_photos .my_product_photos::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 5px grey;
+          box-shadow: inset 0 0 5px grey;
+  border-radius: 10px;
+}
+
+body .my_workshop_products .product_photos .my_product_photos::-webkit-scrollbar-thumb {
+  background: #00cf4d;
   border-radius: 10px;
 }
 
@@ -658,8 +707,15 @@ body .comments_box .user_info i {
   padding: 0 15px;
 }
 
+body .comments_box .text_comments {
+  width: 100%;
+  height: auto;
+  padding-bottom: 35px;
+  position: relative;
+}
+
 body .comments_box .text_comment {
-  width: -100%;
+  width: 100%;
   height: auto;
   padding: 12px;
   background-color: #ffffff;
@@ -677,7 +733,7 @@ body .comments_box .comment_bgc {
 body .comments_box .reply {
   position: absolute;
   bottom: 0;
-  left: 0;
+  left: 40px;
   display: none !important;
 }
 
@@ -788,6 +844,23 @@ body .add_product .modal-list .avatar-edit {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  position: relative;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+body .add_product .modal-list .avatar-edit img {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  -o-object-fit: cover;
+     object-fit: cover;
+  display: none;
+  border-radius: 10px;
 }
 
 body .add_product .modal-list .avatar-edit i {
@@ -820,6 +893,33 @@ body .edit_store .editMyStore {
   padding: 30px;
 }
 
+body .edit_store .editMyStore .edit_store_my_avatar {
+  position: relative;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+body .edit_store .editMyStore .edit_store_my_avatar .add_my_avatar_input {
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  top: 0;
+  width: 100px;
+  height: 100px;
+}
+
+body .edit_store .editMyStore .edit_store_my_avatar .myAvatarImg {
+  width: 60px;
+  height: 60px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 50%;
+}
+
 body .edit_store .editMyStore .my_store_info {
   width: 85%;
   display: -webkit-box;
@@ -843,7 +943,7 @@ body .edit_store .editMyStore .my_store_info textarea {
   background-color: #efefef;
   border: none;
   margin-bottom: 20px;
-  border-radius: 20px;
+  border-radius: 10px;
   font-size: 12px;
   font-weight: 500;
   color: #12114a;
@@ -900,7 +1000,7 @@ body .modal_edit_product .editMyProduct form textarea {
   border-radius: 20px;
   background-color: #efefef;
   border: none;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   padding: 10px 15px;
   font-size: 12px;
   font-weight: 500;
@@ -987,8 +1087,12 @@ body .modal_edit_product .my_photos .my_photo .remove_my_photo {
 }
 
 body .modal_edit_product .my_photos .my_photo .remove_my_photo i {
-  color: tomato;
+  color: #ff8fb4;
   padding-left: 2px;
+}
+
+body .modal_edit_product .my_photos .my_photo .remove_my_photo i:hover {
+  color: tomato;
 }
 
 body .reviews_buttons_desktop {
@@ -1026,8 +1130,6 @@ body .reviews_buttons_mobile {
   margin: 90px 0;
   padding: 20px 0;
   background-color: #00cf4d;
-  -webkit-clip-path: polygon(50% 10%, 51% 0, 100% 0, 100% 100%, 51% 100%, 50% 90%, 49% 100%, 0 100%, 0 0, 49% 0);
-          clip-path: polygon(50% 10%, 51% 0, 100% 0, 100% 100%, 51% 100%, 50% 90%, 49% 100%, 0 100%, 0 0, 49% 0);
 }
 
 body .reviews_buttons_mobile .review_counter {
@@ -1039,7 +1141,15 @@ body .reviews_buttons_mobile .review_counter {
   font-size: 18px;
   font-weight: 600;
   margin-right: 8px;
-  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 body .myWorkshop_back_home {
@@ -1373,40 +1483,26 @@ body footer .soc-end a {
         -ms-flex-align: start !important;
             align-items: start !important;
   }
-  body .my_comment form {
-    -webkit-box-orient: vertical !important;
-    -webkit-box-direction: normal !important;
-        -ms-flex-direction: column !important;
-            flex-direction: column !important;
-  }
-  body .my_comment form button {
-    position: relative !important;
-  }
   body .my_comment form textarea {
     height: auto !important;
   }
   body .comments_group img,
   body .my_comment img {
-    width: 100% !important;
+    width: 70% !important;
+    margin-left: 30px;
   }
   body .comments_group .user_info {
     margin-top: -10px !important;
     margin-left: 0 !important;
-  }
-  body .user_info .date_time {
-    -webkit-box-orient: vertical !important;
-    -webkit-box-direction: normal !important;
-        -ms-flex-direction: column !important;
-            flex-direction: column !important;
-    -webkit-box-align: start !important;
-        -ms-flex-align: start !important;
-            align-items: start !important;
   }
   body .user_info strong {
     width: 120px;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+  }
+  body .workshop_card {
+    width: 210px !important;
   }
 }
 
@@ -1622,6 +1718,27 @@ body footer .soc-end a {
     resize: vertical !important;
     overflow: auto !important;
     border-radius: 10px !important;
+  }
+  body .user_info {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  body .user_info strong {
+    width: 200px !important;
+  }
+  body .my_product_info {
+    margin-top: 20px;
+  }
+  body .my_photos .my_photo {
+    margin-left: 10px !important;
+  }
+}
+
+@media screen and (max-width: 368px) {
+  body .workshop_card {
+    width: 340px !important;
   }
 }
 

@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Letcop news</title>
+  <title>Творческая мастерская</title>
   <link rel="shortcut icon" href="assets/icons/logo.svg" type="image/x-icon">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
@@ -471,7 +471,9 @@
       <div class="row">
         <div class="col-12 header_workshop_sub">
           <div class="d-flex align-items-center">
-            <img src="assets/images/user4.png" alt="">
+            <div class="my_avatar_title">
+              <img src="assets/images/user4.png" alt="">
+            </div>
             <div class="my_info_header_workshop">
               <p>BOBRO-SHOP</p>
               <span>Создатель: <a href="#">Hamilioner</a></span>
@@ -549,10 +551,10 @@
         </div>
       </div>
       <div class="row my_comment">
-        <div class="col-md-1 col-2">
+        <div class="col-lg-1 col-md-2 col-3">
           <img src="assets/images/user1.png" class="" alt="">
         </div>
-        <div class="col-lg-11 col-10">
+        <div class="col-lg-11 col-9">
           <form>
             <textarea onkeypress="auto_grow(this)" onkeydown="auto_grow(this)" class="w-100"
               placeholder="Написать комментарий" required id="my__comment"></textarea>
@@ -562,10 +564,10 @@
       </div>
 
       <div class="row comments_group">
-        <div class="col-md-1 col-2 ml-auto">
+        <div class="col-lg-1 col-md-2 col-3 ml-auto">
           <img src="assets/images/user4.png" alt="">
         </div>
-        <div class="col-10 user_comment">
+        <div class="col-sm-10 col-9 user_comment">
           <div class="user_info d-flex justify-content-between align-items-start">
             <div class="d-flex flex-column">
               <strong>Георгий Петров.</strong>
@@ -576,26 +578,29 @@
               <span class="clock"><i class="fas fa-clock"></i>18:30</span>
             </div>
           </div>
-          <div class="text_comment">
-            <span>После этого обновления перестал работать модуль Яндекс.Кассы для приема платежей в магазине.
-              Специалисты Яндекса говорят что проблема на стороне Ucoz - "сайт не шлёт ответ на печать чека по 54фз,
-              нужны все обязательные реквизиты". Саппорт Ucoz как обычно молчит.
-              В общем спасибо за "хорошие" новости!</span>
+          <div class="text_comments">
+            <div class="text_comment">
+              <span>После этого обновления перестал работать модуль Яндекс.Кассы для приема платежей в магазине.
+                Специалисты Яндекса говорят что проблема на стороне Ucoz - "сайт не шлёт ответ на печать чека по 54фз,
+                нужны все обязательные реквизиты". Саппорт Ucoz как обычно молчит.
+                В общем спасибо за "хорошие" новости!</span>
+            </div>
+            <div class="reply">
+              <a href="#my__comment">
+                <i class="far fa-redo"></i>
+                Ответить
+              </a>
+            </div>
           </div>
-        </div>
-        <div class="col-md-6 text-center reply">
-          <a href="#my__comment">
-            <i class="far fa-redo"></i>
-            Ответить
-          </a>
+
         </div>
       </div>
 
       <div class="row comments_group">
-        <div class="col-md-1 col-2">
+        <div class="col-lg-1 col-md-2 col-3">
           <img src="assets/images/user5.png" alt="">
         </div>
-        <div class="col-10 user_comment mr-auto">
+        <div class="col-sm-10 col-9  user_comment mr-auto">
           <div class="user_info d-flex justify-content-between align-items-start">
             <div class="d-flex flex-column">
               <strong>Георгий Петров.</strong>
@@ -606,17 +611,20 @@
               <span class="clock"><i class="fas fa-clock"></i>18:30</span>
             </div>
           </div>
-          <div class="text_comment ">
-            <span>Подскажите, есть ли ограничения на принимаемые суммы при таком подключении? 15 т.р.?
-              И хотелось бы знать, это послабление яндексом дается на период пандемии для теста (как у многих сервисов)
-              или на постоянно?</span>
+          <div class="text_comments">
+            <div class="text_comment ">
+              <span>Подскажите, есть ли ограничения на принимаемые суммы при таком подключении? 15 т.р.?
+                И хотелось бы знать, это послабление яндексом дается на период пандемии для теста (как у многих
+                сервисов)
+                или на постоянно?</span>
+            </div>
+            <div class="reply">
+              <a href="#my__comment">
+                <i class="far fa-redo"></i>
+                Ответить
+              </a>
+            </div>
           </div>
-        </div>
-        <div class="col-md-4 text-center reply">
-          <a href="#my__comment">
-            <i class="far fa-redo"></i>
-            Ответить
-          </a>
         </div>
       </div>
     </div>
@@ -693,8 +701,9 @@
             </div>
 
             <input type="text" class="w-100" placeholder="Название товара" required>
-            <textarea name="" id="" class="w-100" placeholder="Дайте описание Вашему товару" required></textarea>
-            <input type="text" class="w-50" placeholder="Цена товара">
+            <textarea name="" id="" class="w-100 
+            description_item" placeholder="Дайте описание Вашему товару" required></textarea>
+            <input type="text" class="w-50 product_price" placeholder="Цена товара">
             <button type="submit">Сохранить</button>
           </form>
         </div>
