@@ -1,5 +1,5 @@
 window.addEventListener('load', function() {
-	let selected = true; // change the value to false for viewing in unauthorized mode
+	let selected = false; // change the value to false for viewing in unauthorized mode
 
 	const select = () => {
 		if(selected){
@@ -9,7 +9,7 @@ window.addEventListener('load', function() {
 		}else{
 			document.querySelector('.header_buttons .btn_my_shop').style.display = "none";
 			document.querySelector('.header_buttons .btn_create_store').style.display = "block";
-			document.querySelector('.my_workshopCard').style.display = "none";
+			document.querySelector('.myCardShop').style.display = "none";
 		}
   }
   select()
