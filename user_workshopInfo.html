@@ -469,15 +469,19 @@
 
     <div class="container mb-3">
       <div class="row">
-        <div class="col-12 header_workshop_sub">
+        <div class="col-12 header_workshop_sub d-flex justify-content-between align-items-center">
           <div class="d-flex align-items-center">
             <div class="my_avatar_title">
-              <img src="assets/images/user4.png" alt="">
+              <img src="assets/images/user1.png" alt="">
             </div>
             <div class="my_info_header_workshop">
-              <p>BOBRO-SHOP</p>
-              <span>Создатель: <a href="#">Hamilioner</a></span>
+              <p>BORBO-Market</p>
+              <span>Создатель: <a href="#">Andrey</a></span>
             </div>
+          </div>
+
+          <div class="header_buttons">
+            <a href="./my_workshop.html"><button class="btn_my_shop">связаться</button></a>
           </div>
         </div>
 
@@ -493,13 +497,12 @@
     <div class="container">
       <div class="row">
         <div class="col-12 mobile_back_home d-flex align-items-center justify-content-between mt-n5">
-          <a href="./my_workshop.html" class="back_home">
+          <a href="./user_workshop.html" class="back_home">
             <i class="fa fa-chevron-left fa-2x"></i>Назад
           </a>
           <div class="my_buttons">
             <div class="my_logo"></div>
             <a href="./workshop.html"><button class="go_store">Перейти в магазин</button></a>
-            <button class="edit_product" data-toggle="modal" data-target="#editProduct">редактировать товар</button>
           </div>
         </div>
       </div>
@@ -539,6 +542,7 @@
                 dicta aspernatur quod ex illum consectetur officia fuga ducimus ipsam eum corporis consequuntur odit
                 fugiat? Dolores, eligendi? </p>
             </div>
+            <button class="btn_buy_goods">купить</button>
           </div>
         </div>
       </div>
@@ -634,86 +638,6 @@
     </div>
   </section>
 
-  <!-- Modal Изменить товар -->
-  <div class="modal fade modal_edit_product" id="editProduct" data-backdrop="static" data-keyboard="false" tabindex="-1"
-    aria-labelledby="staticBackdropLabel" aria-hidden="true" style="z-index: 9999;">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-head">
-          <h2 class="modal-title  text-center w-100" id="">
-            Изменить товар
-          </h2>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true"><i class="fas fa-times-circle"></i></span>
-          </button>
-        </div>
-        <div class="modal-list editMyProduct">
-          <form action="">
-            <select name="" id="">
-              <option value="logo">Логотип</option>
-            </select>
-            <div class="my_photos">
-              <div class="my_photo">
-                <img src="assets/images/workshop2.jpg" alt="">
-                <div class="remove_my_photo">
-                  <i class="fas fa-times-circle"></i>
-                </div>
-              </div>
-              <div class="my_photo">
-                <img src="assets/images/workshop1.jpg" alt="">
-                <div class="remove_my_photo">
-                  <i class="fas fa-times-circle"></i>
-                </div>
-              </div>
-              <div class="my_photo">
-                <img src="assets/images/workshop3.jpg" alt="">
-                <div class="remove_my_photo">
-                  <i class="fas fa-times-circle"></i>
-                </div>
-              </div>
-              <div class="my_photo">
-                <img src="assets/images/workshop4.jpg" alt="">
-                <div class="remove_my_photo">
-                  <i class="fas fa-times-circle"></i>
-                </div>
-              </div>
-              <div class="my_photo">
-                <img src="assets/images/workshop1.jpg" alt="">
-                <div class="remove_my_photo">
-                  <i class="fas fa-times-circle"></i>
-                </div>
-              </div>
-              <div class="my_photo">
-                <img src="assets/images/workshop2.jpg" alt="">
-                <div class="remove_my_photo">
-                  <i class="fas fa-times-circle"></i>
-                </div>
-              </div>
-              <div class="my_photo">
-                <img src="assets/images/workshop3.jpg" alt="">
-                <div class="remove_my_photo">
-                  <i class="fas fa-times-circle"></i>
-                </div>
-              </div>
-              <div class="my_photo">
-                <img src="assets/images/workshop4.jpg" alt="">
-                <div class="remove_my_photo">
-                  <i class="fas fa-times-circle"></i>
-                </div>
-              </div>
-            </div>
-
-            <input type="text" class="w-100" placeholder="Название товара" required>
-            <textarea name="" id="" class="w-100 
-            description_item" placeholder="Дайте описание Вашему товару" required></textarea>
-            <input type="text" class="w-50 product_price" placeholder="Цена товара">
-            <button type="submit">Сохранить</button>
-          </form>
-        </div>
-      </div>
-    </div>
-  </div>
-
 
 
 
@@ -721,7 +645,7 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"></script>
   <script src='http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js'></script>
   <script src="assets/js/header.js"></script>
-  <script src="assets/js/my_workshopInfo.js"></script>
+  <script src="assets/js/user_workshop.js"></script>
 </body>
 
 </html>
