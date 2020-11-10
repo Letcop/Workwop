@@ -14,7 +14,7 @@ let avatarImgs = document.querySelectorAll('.avatar_img');
 // Удалить добавленной картинки
 editProductImgs.forEach((editProductImg) => {
   editProductImg.addEventListener('mouseover', () => {
-    editProductImg.parentElement.children[3].style.display = 'block'
+    editProductImg.parentElement.children[3].style.display = 'flex'
   })
 });
 
@@ -26,9 +26,15 @@ editProductImgs.forEach((editProductImg) => {
 
 closeEditProducts.forEach((closeEditProduct) => {
   closeEditProduct.addEventListener('click', () => {
-    console.dir(closeEditProduct.parentElement.children[2].style.display = 'none')
+    closeEditProduct.parentElement.children[2].style.display = 'none'
+    closeAddedProduct.style.display = 'none'
   })
-})
+});
+closeEditProducts.forEach((closeEditProduct) => {
+  closeEditProduct.addEventListener('mouseover', () => {
+    console.log(closeEditProduct.style.display = 'flex')
+  })
+});
 // *********************************************************
 
 // Добавить место удаленной картинки

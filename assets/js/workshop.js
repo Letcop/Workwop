@@ -1,5 +1,5 @@
 window.addEventListener('load', function() {
-	let selected = false; 
+	let selected = true; 
 
 	const select = () => {
 		if(selected){
@@ -66,9 +66,15 @@ addProductImgs.forEach((addProductImg) => {
 
 closeAddedProducts.forEach((closeAddedProduct) => {
   closeAddedProduct.addEventListener('click', () => {
-    console.log(closeAddedProduct.previousElementSibling.style.display = 'none')
+    closeAddedProduct.previousElementSibling.style.display = 'none'
+    closeAddedProduct.style.display = 'none'
   })
-})
+});
+closeAddedProducts.forEach((closeAddedProduct) => {
+  closeAddedProduct.addEventListener('mouseover', () => {
+    closeAddedProduct.style.display = 'flex'
+  })
+});
 
 
 // Workshop home codes

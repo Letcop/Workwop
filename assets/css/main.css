@@ -966,6 +966,10 @@ body .add_product .modal-list .avatar-edit .close_added_product i {
   z-index: 2;
 }
 
+body .add_product .modal-list .avatar-edit .close_added_product i:hover {
+  color: tomato;
+}
+
 body .add_product .modal-list input[type='file'] {
   display: none;
 }
@@ -1039,8 +1043,20 @@ body .modal_edit_product .avatar_edit_images .edit_avatar_img .close_edit_produc
   background-color: #ffffff;
   color: #ff8fb4;
   text-align: center;
-  padding: 3px;
+  width: 25px;
+  height: 25px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   display: none;
+  z-index: 2;
+}
+
+body .modal_edit_product .avatar_edit_images .edit_avatar_img .close_edit_product:hover {
+  color: tomato;
 }
 
 body .edit_store .editMyStore,
@@ -1606,6 +1622,12 @@ body footer .item__list {
 
 body footer .soc-end a {
   margin-right: 15px;
+}
+
+@media screen and (min-width: 1500px) {
+  body .mobile_back_home {
+    margin-top: 0 !important;
+  }
 }
 
 @media screen and (min-width: 993px) {
