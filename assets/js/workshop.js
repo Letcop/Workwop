@@ -1,5 +1,5 @@
 window.addEventListener('load', function() {
-	let selected = true; 
+	let selected = false; 
 
 	const select = () => {
 		if(selected){

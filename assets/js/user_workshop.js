@@ -1,5 +1,6 @@
 let userWorkshopCards = document.querySelectorAll('.user_workshop_card');
 let productEvaluation = document.querySelector('.product_evaluation');
+let myProductPhotos = document.querySelectorAll('.my_product_photos img');
 const comments = document.querySelectorAll('.text_comments');
 console.log(productEvaluation)
 
@@ -50,3 +51,13 @@ userWorkshopCards.forEach((userWorkshopCard) => {
     element.style.height = (element.scrollHeight) + 'px';
   
   }
+
+  // My product photos
+
+myProductPhotos.forEach((myProductPhoto) => {
+  myProductPhoto.addEventListener('click', () => {
+    let photoHome = document.getElementById('photoHome');
+    photoHome.src = myProductPhoto.src
+  })
+});
+// **********************************************
