@@ -40,12 +40,6 @@ body {
     display: flex;
     align-items: start !important;
   }
-  .my_comment form {
-    // flex-direction: column !important;
-  }
-  .my_comment form button {
-    // position: relative !important;
-  }
   .my_comment form textarea {
     height: auto !important ;
   }
@@ -58,10 +52,6 @@ body {
     margin-top: -10px !important;
     margin-left: 0 !important;
   }
-  .user_info .date_time {
-    // flex-direction: column !important;
-    // align-items: start !important;
-  }
   .user_info strong {
     width: 120px;
     white-space: nowrap;
@@ -70,6 +60,12 @@ body {
   }
   .workshop_card {
     width: 210px !important;
+  }
+  .reviews_buttons_desktop {
+    display: none !important;
+  }
+  .reviews_buttons_mobile {
+    display: block !important;
   }
 }
 }

@@ -4,6 +4,28 @@ let myWorkshopCards = document.querySelectorAll('.my_workshop_card');
 let myStoreName = document.querySelector('.my_store_name');
 let myStoreTextString = document.querySelector('.my_store_text_string'); 
 let imgAvatarEdits = document.querySelectorAll('.avatar-edit input');
+let addProductImgs = document.querySelectorAll('.add_product_img');
+let closeAddedProducts = document.querySelectorAll('.close_added_product');
+
+
+addProductImgs.forEach((addProductImg) => {
+  addProductImg.addEventListener('mouseover', () => {
+    addProductImg.parentElement.children[3].style.display = 'flex'
+  })
+});
+
+addProductImgs.forEach((addProductImg) => {
+  addProductImg.addEventListener('mouseout', () => {
+    addProductImg.parentElement.children[3].style.display = 'none'
+  })
+});
+
+closeAddedProducts.forEach((closeAddedProduct) => {
+  closeAddedProduct.addEventListener('click', () => {
+    console.log(closeAddedProduct.previousElementSibling.style.display = 'none')
+  })
+})
+
 
 
 // Workshop Cards photo

@@ -699,9 +699,26 @@ border-radius: 10px;
           display: none;
           border-radius: 10px;
         }
-        i {
+        .add_product_icon {
           cursor: pointer;
           color: $divider-color-text;
+        }
+        .close_added_product {
+          background-color: $primary-color-text;
+          width: 25px;
+          height: 25px;
+          border-radius: 50%;
+          display: none;
+          align-items: center;
+          justify-content: center;
+          position: absolute;
+          top: -10px;
+          right: -10px;
+          i {
+            color: #ff8fb4;
+            cursor: pointer;
+            z-index: 2;
+          }
         }
       }
       input[type = 'file'] {
@@ -713,6 +730,56 @@ border-radius: 10px;
         background-color: $primary-color;
         border-radius: 30px;
         font-size: 12px;
+      }
+    }
+  }
+
+  .modal_edit_product {
+    .avatar_edit_images {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      input[type = 'file'] {
+        display: none;
+      }
+      .edit_avatar_img {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 90px;
+        height: 90px;
+        border-radius: 5px;
+        position: relative;
+        margin-top: 20px;
+        .avatar_img {
+          .add_product_icon {
+            color: $divider-color-text;
+            cursor: pointer;
+          }
+        }
+        img {
+          width: 90px;
+          height: 90px;
+          border-radius: 5px;
+          position: absolute; 
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          object-fit: cover;
+        }
+        .close_edit_product {
+          position: absolute;
+          top: -5px;
+          right: -5px;
+          border-radius: 50%;
+          background-color: $primary-color-text;
+          color: #ff8fb4;
+          text-align: center;
+          padding: 3px;
+          display: none;
+        }
       }
     }
   }
@@ -812,6 +879,7 @@ border-radius: 10px;
           text-transform: uppercase;
           font-size: 15px;
           font-weight: 600;
+          margin-right: 100px;
         }
       }
     }
@@ -829,7 +897,7 @@ border-radius: 10px;
         input,
         textarea {
           height: 30px;
-          border-radius: 20px;
+          border-radius: 10px;
           background-color: $divider-color;
           border: none;
           margin-bottom: 10px;
@@ -872,46 +940,6 @@ border-radius: 10px;
       }
       select:focus {
         outline: none;
-      }
-    }
-    .my_photos {
-      margin-top: 20px;
-      display: flex;
-      flex-wrap: wrap;
-      margin-left: -20px;
-      .my_photo {
-        width: 65px;
-        height: 65px;
-        margin-left: 40px;
-        margin-bottom: 30px;
-        position: relative;
-        img {
-        object-fit: cover;
-        width: 65px;
-        height: 65px;
-        border-radius: 5px;
-        }
-        .remove_my_photo {
-          display: none;
-          position: absolute;
-          top: -5px;
-          right: -5px;
-          z-index: 1;
-          width: 20px;
-          height: 20px;
-          border-radius: 50%;
-          background-color: $primary-color-text;
-          text-align: center;
-          cursor: pointer;
-        
-        i {
-          color: #ff8fb4;
-          padding-left: 2px;
-        }
-        i:hover {
-          color: tomato;
-        }
-      }
       }
     }
   }

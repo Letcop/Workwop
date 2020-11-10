@@ -1,13 +1,15 @@
 window.addEventListener('load', function() {
-	let selected = false; // change the value to false for viewing in unauthorized mode
+	let selected = true; 
 
 	const select = () => {
 		if(selected){
       document.querySelector('.header_buttons .btn_my_shop').style.display = "block";
+      document.querySelector('.header_buttons .btn_add_product').style.display = "block";
       document.querySelector('.header_buttons .btn_create_store').style.display = "none";
       document.querySelector('.removed_card').style.display = "none";
 		}else{
 			document.querySelector('.header_buttons .btn_my_shop').style.display = "none";
+			document.querySelector('.header_buttons .btn_add_product').style.display = "none";
 			document.querySelector('.header_buttons .btn_create_store').style.display = "block";
 			document.querySelector('.myCardShop').style.display = "none";
 		}
@@ -17,11 +19,12 @@ window.addEventListener('load', function() {
 
 
 let bookmarks = document.querySelectorAll('i.fa-bookmark');
-let myProductPhotos = document.querySelectorAll('.my_product_photos img');
 let addMyAvatarInput = document.querySelector('.add_my_avatar_input');
 let addUserAvatarInput = document.querySelector('.add_user_avatar_input');
 let avatarEditHome = document.querySelectorAll('.avatar_edit_home');
 let workshopCards = document.querySelectorAll('.workshop_card');
+let addProductImgs = document.querySelectorAll('.add_product_img');
+let closeAddedProducts = document.querySelectorAll('.close_added_product');
 
 workshopCards.forEach((workshopCard) => {
   workshopCard.addEventListener('mouseover', () => {
@@ -35,9 +38,37 @@ workshopCards.forEach((workshopCard) => {
   })
 });
 
+// Модал редактировать товар
+// avatarEditHome.forEach((imgAvatarEdit) => {
+//   imgAvatarEdit.addEventListener('change', (e) => {
 
+//     e.target.parentElement.children[2]
+//     if(e.target.files.length > 0) {
+//       let src = URL.createObjectURL(e.target.files[0]);
+//       let blockAvatar = e.target.parentElement.children[2];
+//         blockAvatar.src = src;
+//         blockAvatar.style.display = 'flex'
+//     }
+//   });
+// });
 
+addProductImgs.forEach((addProductImg) => {
+  addProductImg.addEventListener('mouseover', () => {
+    addProductImg.parentElement.children[3].style.display = 'flex'
+  })
+});
 
+addProductImgs.forEach((addProductImg) => {
+  addProductImg.addEventListener('mouseout', () => {
+    addProductImg.parentElement.children[3].style.display = 'none'
+  })
+});
+
+closeAddedProducts.forEach((closeAddedProduct) => {
+  closeAddedProduct.addEventListener('click', () => {
+    console.log(closeAddedProduct.previousElementSibling.style.display = 'none')
+  })
+})
 
 
 // Workshop home codes
@@ -56,16 +87,6 @@ bookmarks.forEach((bookmark => {
 }));
 // *******************************************************
 
-// My product photos
-
-myProductPhotos.forEach((myProductPhoto) => {
-  myProductPhoto.addEventListener('click', () => {
-    let photoHome = document.getElementById('photoHome');
-    photoHome.src = myProductPhoto.src
-  })
-});
-// **********************************************
-
 
 
 
@@ -73,7 +94,7 @@ myProductPhotos.forEach((myProductPhoto) => {
 avatarEditHome.forEach((imgAvatarEdit) => {
   imgAvatarEdit.addEventListener('change', (e) => {
 
-    console.dir(e.target.parentElement.children[2])
+    e.target.parentElement.children[2]
     if(e.target.files.length > 0) {
       let src = URL.createObjectURL(e.target.files[0]);
       let blockAvatar = e.target.parentElement.children[2];
@@ -92,14 +113,14 @@ addUserAvatarInput.addEventListener('change', (e) => {
   }
 });
 
-addMyAvatarInput.addEventListener('change', (e) => {
-  if(e.target.files.length > 0) {
-    let src = URL.createObjectURL(e.target.files[0]);
-    let myAvatar = document.querySelector('.myAvatarImg');
-    myAvatar.src = src;
-    myAvatar.style.display = 'block'
-  }
-});
+// addMyAvatarInput.addEventListener('change', (e) => {
+//   if(e.target.files.length > 0) {
+//     let src = URL.createObjectURL(e.target.files[0]);
+//     let myAvatar = document.querySelector('.myAvatarImg');
+//     myAvatar.src = src;
+//     myAvatar.style.display = 'block'
+//   }
+// });
 
 
 

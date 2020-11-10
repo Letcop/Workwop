@@ -938,9 +938,32 @@ body .add_product .modal-list .avatar-edit img {
   border-radius: 10px;
 }
 
-body .add_product .modal-list .avatar-edit i {
+body .add_product .modal-list .avatar-edit .add_product_icon {
   cursor: pointer;
   color: #c1c4ca;
+}
+
+body .add_product .modal-list .avatar-edit .close_added_product {
+  background-color: #ffffff;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  display: none;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: absolute;
+  top: -10px;
+  right: -10px;
+}
+
+body .add_product .modal-list .avatar-edit .close_added_product i {
+  color: #ff8fb4;
+  cursor: pointer;
+  z-index: 2;
 }
 
 body .add_product .modal-list input[type='file'] {
@@ -953,6 +976,71 @@ body .add_product .modal-list button {
   background-color: #00cf4d;
   border-radius: 30px;
   font-size: 12px;
+}
+
+body .modal_edit_product .avatar_edit_images {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+body .modal_edit_product .avatar_edit_images input[type='file'] {
+  display: none;
+}
+
+body .modal_edit_product .avatar_edit_images .edit_avatar_img {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 90px;
+  height: 90px;
+  border-radius: 5px;
+  position: relative;
+  margin-top: 20px;
+}
+
+body .modal_edit_product .avatar_edit_images .edit_avatar_img .avatar_img .add_product_icon {
+  color: #c1c4ca;
+  cursor: pointer;
+}
+
+body .modal_edit_product .avatar_edit_images .edit_avatar_img img {
+  width: 90px;
+  height: 90px;
+  border-radius: 5px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+body .modal_edit_product .avatar_edit_images .edit_avatar_img .close_edit_product {
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  border-radius: 50%;
+  background-color: #ffffff;
+  color: #ff8fb4;
+  text-align: center;
+  padding: 3px;
+  display: none;
 }
 
 body .edit_store .editMyStore,
@@ -1107,6 +1195,7 @@ body .create_store .editMyStore .my_store_info button {
   text-transform: uppercase;
   font-size: 15px;
   font-weight: 600;
+  margin-right: 100px;
 }
 
 body .modal_edit_product .editMyProduct {
@@ -1132,7 +1221,7 @@ body .modal_edit_product .editMyProduct form {
 body .modal_edit_product .editMyProduct form input,
 body .modal_edit_product .editMyProduct form textarea {
   height: 30px;
-  border-radius: 20px;
+  border-radius: 10px;
   background-color: #efefef;
   border: none;
   margin-bottom: 10px;
@@ -1179,55 +1268,6 @@ body .modal_edit_product .editMyProduct select {
 
 body .modal_edit_product .editMyProduct select:focus {
   outline: none;
-}
-
-body .modal_edit_product .my_photos {
-  margin-top: 20px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  margin-left: -20px;
-}
-
-body .modal_edit_product .my_photos .my_photo {
-  width: 65px;
-  height: 65px;
-  margin-left: 40px;
-  margin-bottom: 30px;
-  position: relative;
-}
-
-body .modal_edit_product .my_photos .my_photo img {
-  -o-object-fit: cover;
-     object-fit: cover;
-  width: 65px;
-  height: 65px;
-  border-radius: 5px;
-}
-
-body .modal_edit_product .my_photos .my_photo .remove_my_photo {
-  display: none;
-  position: absolute;
-  top: -5px;
-  right: -5px;
-  z-index: 1;
-  width: 20px;
-  height: 20px;
-  border-radius: 50%;
-  background-color: #ffffff;
-  text-align: center;
-  cursor: pointer;
-}
-
-body .modal_edit_product .my_photos .my_photo .remove_my_photo i {
-  color: #ff8fb4;
-  padding-left: 2px;
-}
-
-body .modal_edit_product .my_photos .my_photo .remove_my_photo i:hover {
-  color: tomato;
 }
 
 body .reviews_buttons_desktop {
@@ -1638,6 +1678,12 @@ body footer .soc-end a {
   }
   body .workshop_card {
     width: 210px !important;
+  }
+  body .reviews_buttons_desktop {
+    display: none !important;
+  }
+  body .reviews_buttons_mobile {
+    display: block !important;
   }
 }
 

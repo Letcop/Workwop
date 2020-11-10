@@ -5,7 +5,45 @@ let productPrice = document.querySelector('.product_price');
 let myPhotos = document.querySelectorAll('.my_photo');
 let removeMyPhotos = document.querySelectorAll('.remove_my_photo');
 const comments = document.querySelectorAll('.text_comments');
+let myProductPhotos = document.querySelectorAll('.my_product_photos img');
+let editProductImgs = document.querySelectorAll('.edit_product_img');
+let closeEditProducts = document.querySelectorAll('.close_edit_product');
+let avatarImgs = document.querySelectorAll('.avatar_img');
 
+
+// Удалить добавленной картинки
+editProductImgs.forEach((editProductImg) => {
+  editProductImg.addEventListener('mouseover', () => {
+    editProductImg.parentElement.children[3].style.display = 'block'
+  })
+});
+
+editProductImgs.forEach((editProductImg) => {
+  editProductImg.addEventListener('mouseout', () => {
+    editProductImg.parentElement.children[3].style.display = 'none'
+  })
+});
+
+closeEditProducts.forEach((closeEditProduct) => {
+  closeEditProduct.addEventListener('click', () => {
+    console.dir(closeEditProduct.parentElement.children[2].style.display = 'none')
+  })
+})
+// *********************************************************
+
+// Добавить место удаленной картинки
+avatarImgs.forEach((avatarImg) => {
+  avatarImg.addEventListener('change', (e) => {
+    e.target.parentElement.children[2]
+    if(e.target.files.length > 0) {
+      let src = URL.createObjectURL(e.target.files[0]);
+      let addAvatar = e.target.parentElement.children[2];
+      addAvatar.src = src;
+      addAvatar.style.display = 'block'
+    }
+  });
+});
+// ***********************************************
 
 productEvaluation.addEventListener('click', () => {
   productEvaluation.classList.toggle('far');
@@ -39,6 +77,15 @@ removeMyPhotos.forEach((removeMyPhoto) => {
 });
 // ***************************************************************
 
+// My product photos
+
+myProductPhotos.forEach((myProductPhoto) => {
+  myProductPhoto.addEventListener('click', () => {
+    let photoHome = document.getElementById('photoHome');
+    photoHome.src = myProductPhoto.src
+  })
+});
+// **********************************************
 
 // Comment 
 
