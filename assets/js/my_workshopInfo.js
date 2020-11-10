@@ -27,12 +27,16 @@ editProductImgs.forEach((editProductImg) => {
 closeEditProducts.forEach((closeEditProduct) => {
   closeEditProduct.addEventListener('click', () => {
     closeEditProduct.parentElement.children[2].style.display = 'none'
-    closeAddedProduct.style.display = 'none'
   })
 });
 closeEditProducts.forEach((closeEditProduct) => {
   closeEditProduct.addEventListener('mouseover', () => {
-    console.log(closeEditProduct.style.display = 'flex')
+    closeEditProduct.style.display = 'flex'
+  })
+});
+closeEditProducts.forEach((closeEditProduct) => {
+  closeEditProduct.addEventListener('click', () => {
+    closeEditProduct.style.display = 'none'
   })
 });
 // *********************************************************
